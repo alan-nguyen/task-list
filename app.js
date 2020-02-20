@@ -15,6 +15,9 @@ function loadEventListeners() {
 
   // Remove task event
   taskList.addEventListener("click", removeTask);
+
+  // Clear tasks event
+  clearBtn.addEventListener("click", clearTasks);
 }
 
 // Add Task
