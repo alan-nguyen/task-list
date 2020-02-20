@@ -57,3 +57,15 @@ function removeTask(e) {
     }
   }
 }
+
+// Clear Tasks
+function clearTasks() {
+  if (confirm("Are You Sure?")) {
+    // taskList.innerHTML = "";
+
+    // Faster
+    while (taskList.firstChild) {
+      taskList.removeChild(taskList.firstChild);
+    }
+  }
+}
