@@ -40,7 +40,7 @@ function getTasks() {
     // Add class
     li.className = "collection-item";
     // Create text node and append to li
-    li.appendChild(document.createTextNode(task.value));
+    li.appendChild(document.createTextNode(task));
     // Create new link element
     const link = document.createElement("a");
     // Add class
@@ -100,7 +100,7 @@ function storeTaskInLocalStorage(task) {
 
   tasks.push(task);
 
-  localStorage.setItem("task", JSON.stringify(tasks));
+  localStorage.setItem("task", JSON.stringify(task));
 }
 
 // Remove Task
@@ -143,6 +143,14 @@ function clearTasks() {
       taskList.removeChild(taskList.firstChild);
     }
   }
+
+  // Clear from LS
+  clearTasksFromLocalStorage();
+}
+
+// Clear from LS
+function clearTasksFromLocalStorage() {
+  localStorage.clear();
 }
 
 // Filter Tasks
