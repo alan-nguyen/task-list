@@ -100,7 +100,7 @@ function storeTaskInLocalStorage(task) {
 
   tasks.push(task);
 
-  localStorage.setItem("task", JSON.stringify(task));
+  localStorage.setItem("tasks", JSON.stringify(tasks));
 }
 
 // Remove Task
